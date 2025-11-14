@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/bg_full_view"
+    tools:context=".Fragment.Contect_Fragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rev_fev"
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/rel_empty_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_fav_icon"
+            android:src="@drawable/ic_no_favorite"
+            android:layout_width="120dp"
+            android:layout_height="120dp">
+
+        </ImageView>
+
+        <TextView
+            android:paddingTop="7dp"
+            android:textSize="17sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="?arrow_color"
+            android:text="@string/str_no_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+</FrameLayout>

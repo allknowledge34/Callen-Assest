@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?lang_bg_color"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rel_selected"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="2dp"
+        android:elevation="1dp"
+        android:background="@drawable/bg_item_unselect_lang"
+        android:foreground="@drawable/ripple_effect_rect"
+        android:gravity="center|start"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/img_lang_logo"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_india">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/select_country"
+            android:layout_toEndOf="@+id/img_lang_logo"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/txt_trans_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/img_lang_logo"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_gravity="center|start|top"
+                android:textAlignment="viewStart"
+                android:gravity="start|center_vertical"
+                android:text="English"
+                android:textColor="?text_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <RadioButton
+            android:id="@+id/select_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/radio_check"
+            android:clickable="false"
+            android:gravity="center" />
+    </RelativeLayout>
+
+</RelativeLayout>

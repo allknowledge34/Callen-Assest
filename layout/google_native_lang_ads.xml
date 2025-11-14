@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nativeAd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+       android:background="?add_color_bg">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    app:cardBackgroundColor="@color/ad_tag_color"
+                    app:cardCornerRadius="3dp">
+
+                    <TextView
+                        android:id="@+id/tvAdTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="3dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="AD"
+                        android:textColor="@color/ad_tag_text_color"
+                        android:textSize="10sp" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                    <ImageView
+                        android:id="@+id/adIcon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@null"
+                        tools:src="@mipmap/ic_launch_square" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/adName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="?text_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:text="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/adBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:textAlignment="viewStart"
+                    android:includeFontPadding="false"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:textColor="@color/ad_text_secondary_color"
+                    android:textSize="12sp"
+                    tools:text="Install app" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/adCallToAction"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/ads_but"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/ad_btn_primary_color"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            tools:text="@string/app_name" />
+
+    </LinearLayout>
+
+</com.google.android.gms.ads.nativead.NativeAdView>

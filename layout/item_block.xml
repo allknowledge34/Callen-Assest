@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="75dp">
+
+    <RelativeLayout
+        android:id="@+id/rel_contect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:padding="4dp"
+            android:gravity="center"
+            android:src="@drawable/ic_contact_1"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            android:layout_toStartOf="@+id/img_remove_block"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?text_color"
+                android:textAlignment="viewStart"
+                android:singleLine="true"
+                android:textSize="16sp"
+               android:fontFamily="@font/poppins_semibold" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?second_text_color"
+                android:textAlignment="viewStart"
+                android:textSize="12sp"
+               android:fontFamily="@font/poppins_medium" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:padding="3dp"
+            android:id="@+id/img_remove_block"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:foreground="@drawable/ripple_effect_circle"
+            android:src="@drawable/ic_remove_edit"
+            android:layout_width="30dp"
+            android:layout_height="30dp">
+
+        </ImageView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

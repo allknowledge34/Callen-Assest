@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_full_view"
+
+    tools:context=".Fragment.Contect_Fragment">
+
+    <RelativeLayout
+        android:layout_marginBottom="10dp"
+        android:id="@+id/rev_contect_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="right">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rev_contect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <com.reddit.indicatorfastscroll.FastScrollerView
+            android:id="@+id/fastscroller"
+            android:layout_width="32dp"
+            android:textAppearance="@style/text_style_fastscroll"
+            app:fastScrollerTextPadding="2dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:textColor="?text_color" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rel_empty_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:tint="?arrow_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_no_contact">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/str_no_contect"
+            android:textColor="?arrow_color"
+            android:textSize="20sp">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+</FrameLayout>

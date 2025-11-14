@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="red">#FF2D2D</color>
+    <color name="lang_bg_color">#F3F4F8</color>
+    <color name="call_btn_bg">#1AFFFFFF</color>
+    <color name="gery">#FF787777</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="second_text_color">#9F9F9F</color>
+    <color name="bg_color">#242424</color>
+    <color name="bg_color_white">#ffffff</color>
+
+    <color name="activated_item_foreground">#44888888</color>
+    <color name="themecolor">#06C35E</color>
+    <color name="unslect_color">#D7D7D7</color>
+    <color name="unslect_color_dark">#595959</color>
+    <color name="light_color">#D8E8DF</color>
+    <color name="grey_color">#9F9F9F</color>
+    <color name="continue_status">#E7F9EF</color>
+    <color name="continue_status_dark">#112319</color>
+    <color name="bg_1">#B969FF</color>
+    <color name="bg_2">#FF695C</color>
+    <color name="bg_3">#FFBE01</color>
+    <color name="bg_4">#1EC2FE</color>
+    <color name="bg_5">#FF6AB1</color>
+    <color name="bg_6">#47BB66</color>
+    <color name="bg_7">#6886FF</color>
+    <color name="btncoloralfaripple">#80A5A2A2</color>
+
+
+
+    <color name="ad_bg_color">#EDEDED</color>
+    <color name="ad_btn_color">#FF9919</color>
+    <color name="ad_text_primary_color">#000000</color>
+    <color name="ad_btn_primary_color">#FFFFFF</color>
+    <color name="ad_tag_color">#6E6E6E</color>
+    <color name="ad_tag_text_color">#FFFFFF</color>
+    <color name="ad_text_secondary_color">#8F8F8F</color>
+    <color name="ad_space_text_color">#000000</color>
+</resources>

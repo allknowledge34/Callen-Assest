@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<RelativeLayout
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="5dp"
+    android:id="@+id/rel_selected"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+
+    android:foreground="@drawable/ripple_effect"
+    android:layout_centerVertical="true"
+    android:gravity="center|start"
+    android:padding="5dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:scaleType="fitCenter"
+        app:riv_corner_radius="30dip"
+        app:riv_mutate_background="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_contact_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+
+    </com.makeramen.roundedimageview.RoundedImageView>
+
+    <LinearLayout
+        android:layout_toStartOf="@+id/img_more"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_gravity="center|start"
+            android:gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?text_color"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:fontFamily="@font/figtree_semibold" />
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_margin="3dp"
+                    android:id="@+id/img_type"
+                    android:src="@drawable/ic_call_incoming"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:fontFamily="@font/figtree_semibold"
+                    android:textColor="?second_text_color"
+                    android:textSize="13sp"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="end"
+                android:layout_gravity="end|center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="?second_text_color"
+                    android:textSize="12sp"  />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="?second_text_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:foreground="@drawable/ripple_effect"
+        android:id="@+id/img_more"
+        android:src="@drawable/ic_more"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp">
+
+    </ImageView>
+</RelativeLayout>
+
+</RelativeLayout>

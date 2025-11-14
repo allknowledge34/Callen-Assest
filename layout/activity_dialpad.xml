@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialpad_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:background="?lang_bg_color"
+    android:focusableInTouchMode="true">
+
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:foreground="@drawable/ripple_effect_rect"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_arrow"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/imv_add_contact"
+            android:layout_toEndOf="@+id/img_back"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:textSize="17sp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imv_add_contact"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:foreground="@drawable/ripple_effect_rect"
+            android:padding="5dp"
+            android:src="@drawable/ic_more"
+            android:visibility="gone"></ImageView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rel_dialog"
+        android:layout_below="@+id/rel_top">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_full_view_sec1">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:padding="6dp"
+                android:scrollbars="none"
+                android:visibility="visible" />
+
+            <ScrollView
+                android:id="@+id/rel_empty_all"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="top|center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/img_no_contect"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center|top"
+                        android:src="@drawable/ic_no_contact">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_below="@+id/img_no_contect"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/str_no_contect"
+                        android:textColor="?second_text_color"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/cl_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_full_view_dialpad"
+            android:elevation="30dp"
+            android:visibility="visible">
+
+
+            <EditText
+                android:id="@+id/et_dialpad_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center|bottom"
+                android:inputType="phone"
+                android:paddingTop="30dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="?text_color"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txt_add_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_dialpad_input"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/figtree_semibold"
+                android:foreground="@drawable/ripple_effect"
+                android:padding="4dp"
+                android:text="@string/str_add_number"
+                android:textColor="@color/themecolor"
+                android:textSize="14sp">
+
+            </TextView>
+
+
+            <include
+                android:id="@+id/dialpadInclude"
+                layout="@layout/dialpad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_add_number" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dialpadInclude"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/fab_call"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:foreground="@drawable/ripple_effect_circle"
+                    android:src="@drawable/ic_call_dialpad" />
+
+                <ImageView
+                    android:id="@+id/dialpad_clear_char"
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toEndOf="@+id/fab_call"
+                    android:foreground="@drawable/ripple_effect_rect"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_eraser_dialpad"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

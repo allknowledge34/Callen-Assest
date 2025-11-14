@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bg_color" format="reference|color"></attr>
+    <attr name="lang_bg_color" format="reference|color"></attr>
+    <attr name="text_color" format="reference|color"></attr>
+    <attr name="theme_color" format="reference|color"></attr>
+    <attr name="navigation_bg_color" format="reference|color"></attr>
+    <attr name="navigation_bg_color_top" format="reference|color"></attr>
+    <attr name="default_bg_color" format="reference|color"></attr>
+    <attr name="continuescreen_color" format="reference|color"></attr>
+    <attr name="unslect_color" format="reference|color"></attr>
+    <attr name="continuescreen_bg" format="reference"></attr>
+    <attr name="default_banner_bg" format="reference"></attr>
+    <attr name="second_text_color" format="reference|color"></attr>
+    <attr name="arrow_color" format="reference|color"></attr>
+    <attr name="radio_btn_color" format="reference|color"></attr>
+    <attr name="dialog_cancel" format="reference|color"></attr>
+    <attr name="line_transperent" format="reference|color"></attr>
+    <attr name="dialg_bg_number" format="reference|color"></attr>
+    <attr name="black_transprent" format="reference|color"></attr>
+    <attr name="call_btn_bg" format="reference|color"></attr>
+    <attr name="add_color_bg" format="reference|color"></attr>
+    <attr name="popup_border" format="reference|color"></attr>
+
+
+
+    <attr name="indicatorFastScrollerStyle" format="reference" />
+    <attr name="indicatorFastScrollerThumbStyle" format="reference" />
+
+    <attr name="fastScrollerIconSize" format="dimension" />
+    <attr name="fastScrollerIconColor" format="color" />
+    <attr name="fastScrollerTextPadding" format="dimension" />
+    <attr name="fastScrollerThumbColor" format="color" />
+
+    <declare-styleable name="FastScrollerView">
+        <attr name="fastScrollerIconSize" />
+        <attr name="fastScrollerIconColor" />
+        <attr name="android:textAppearance" />
+        <attr name="android:textColor" />
+        <attr name="fastScrollerTextPadding" />
+    </declare-styleable>
+
+    <declare-styleable name="FastScrollerThumbView">
+        <attr name="fastScrollerThumbColor" />
+        <attr name="fastScrollerIconSize" />
+        <attr name="fastScrollerIconColor" />
+        <attr name="android:textAppearance" />
+        <attr name="android:textColor" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_alignParentEnd="true"
+    android:layout_gravity="end"
+    >
+
+    <RelativeLayout
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:elevation="2dp"
+        android:background="@drawable/bg_popup">
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+
+                android:id="@+id/rel_share"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/ripple_effect_rect"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/img_tab"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_share_detail">
+
+                </ImageView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_toEndOf="@+id/img_tab"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:paddingTop="5dp"
+                    android:text="@string/str_share"
+
+                    android:textColor="?text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_delete"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_share"
+                android:foreground="@drawable/ripple_effect_rect"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp">
+
+                <ImageView
+                    android:id="@+id/img_history"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_delete_detail">
+
+                </ImageView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_toEndOf="@+id/img_history"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:paddingTop="5dp"
+                    android:text="@string/str_delete"
+
+                    android:textColor="?text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?navigation_bg_color"
+
+    tools:context=".activity.BlockContectActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:padding="5dp"
+            android:foreground="@drawable/ripple_effect_rect"
+            android:src="@drawable/ic_back_arrow"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/img_back"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:text="@string/str_call_blocker"
+            android:textColor="?text_color"
+            android:textSize="17sp">
+
+        </TextView>
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_above="@+id/constrain_adview"
+        android:background="?lang_bg_color"
+        android:layout_below="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_full_view_sec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rel_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rev_blocklist"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:id="@+id/rel_empty_all"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:tint="?arrow_color"
+                    android:src="@drawable/ic_no_blocker"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp">
+
+                </ImageView>
+
+                <TextView
+                    android:paddingTop="5dp"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="?arrow_color"
+                    android:text="@string/str_no_blocker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrain_adview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+           android:background="?add_color_bg"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rel_native_banner"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+               android:background="?add_color_bg"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_ad_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/advertisement_space"
+                android:textColor="?text_color"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_native_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?navigation_bg_color"
+
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:padding="5dp"
+            android:foreground="@drawable/ripple_effect_rect"
+            android:src="@drawable/ic_back_arrow"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/img_more"
+            android:layout_toEndOf="@+id/img_back"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:text="@string/str_call_history"
+            android:textColor="?text_color"
+            android:textSize="17sp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/img_more"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:foreground="@drawable/ripple_effect_rect"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_more"></ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_above="@+id/constrain_adview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rel_top"
+        android:background="?lang_bg_color">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_full_view_sec"
+            android:padding="6dp">
+
+            <RelativeLayout
+                android:layout_marginStart="5dp"
+                android:id="@+id/rel_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rel_contect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:src="@drawable/ic_contact_1">
+
+
+                    </com.makeramen.roundedimageview.RoundedImageView>
+
+                    <LinearLayout
+                        android:layout_toStartOf="@+id/iv_call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/iv_image"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="22dp"
+                            android:singleLine="true"
+                            android:text="kfkfkrpppp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="?text_color"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="?second_text_color"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/iv_call"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:foreground="@drawable/ripple_effect_circle"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_call">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_below="@+id/rel_contect"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="?line_transperent">
+
+                </View>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rev_call_logdetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rel_contect"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:id="@+id/rel_empty_all"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/ic_history_empty"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                </ImageView>
+
+                <TextView
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="?second_text_color"
+                    android:text="@string/str_no_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrain_adview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+           android:background="?add_color_bg"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rel_native_banner"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+               android:background="?add_color_bg"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_ad_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/advertisement_space"
+                android:textColor="?text_color"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_native_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

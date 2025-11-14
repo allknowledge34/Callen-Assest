@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="235dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_gravity="end"
+    >
+
+    <RelativeLayout
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:elevation="2dp"
+        android:background="@drawable/bg_popup">
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rel_fav"
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/ripple_effect_rect"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="13dp">
+
+                <ImageView
+                    android:id="@+id/img_history"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_favorite_menu">
+
+                </ImageView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:singleLine="true"
+                    android:layout_toEndOf="@+id/img_history"
+                    android:fontFamily="@font/bevietnampro_medium"
+                    android:text="@string/str_remove_fav"
+
+                    android:textColor="?text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+
+                android:id="@+id/rel_contect_detail"
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_fav"
+                android:foreground="@drawable/ripple_effect"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="13dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/img_tab"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_info">
+
+                </ImageView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="8dp"
+                    android:singleLine="true"
+                    android:layout_toEndOf="@+id/img_tab"
+                    android:fontFamily="@font/bevietnampro_medium"
+                    android:text="@string/str_contect_detail"
+                    android:textColor="?text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rel_history"
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_contect_detail"
+                android:foreground="@drawable/ripple_effect_rect"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="13dp">
+
+                <ImageView
+                    android:id="@+id/img_bookmark"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_history">
+
+                </ImageView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="8dp"
+                    android:singleLine="true"
+                    android:layout_toEndOf="@+id/img_bookmark"
+                    android:fontFamily="@font/bevietnampro_medium"
+                    android:text="@string/str_history"
+
+                    android:textColor="?text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
